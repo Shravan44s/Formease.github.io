@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormEase</title>
+  <link rel="shortcut icon" href="./s1.png" type="image/x-icon">
+  <link rel="stylesheet" href="./custom.css">
+</head>
+<body>
+
+<div class="progress-container">
+  <div class="progress-circle active" onclick="goToSection(1)">
+    1
+    <span class="circle-text">Initial_Information</span>
+  </div>
+  <div class="progress-circle" onclick="goToSection(2)">
+    2
+    <span class="circle-text">Party_Information</span>
+  </div>
+  <div class="progress-circle" onclick="goToSection(3)">
+    3
+    <span class="circle-text">Logistics</span>
+  </div>
+  <div class="progress-circle" onclick="goToSection(4)">
+    4
+    <span class="circle-text">Additional_Information</span>
+  </div>
+</div>
+
+
+  <section id="section1" style="display: block;">
+    <h2>Initial Information </h2>
+    <form id="initialForm">
+      <form id="legalForm">
+        <div class="form-group2">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group2">
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+    
+        <div class="form-group2">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="Address">Address:</label>
+          <input type="text" id="Address" name="Address" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="Email">Email:</label>
+          <input type="email" id="Email" name="Email" required>
+        </div>
+       
+       
+      </form>
+      <button type="button" onclick="nextSection(1)">Next</button>
+    </form>
+  </section>
+
+  <section id="section2">
+    <details>
+      <summary class="dropdown-summary"><h2>Booking Party Information</h2></summary>
+      <label>Use Information On Account?</label>
+
+      <label class="switch">
+        <input type="checkbox" name="userInformation" checked hidden>
+        <span class="slider"></span>
+      </label>
+      
+    <form id="partyForm">
+        <div class="form-group">
+          <label>Firm Name:</label>
+          <select>
+            <option ></option>
+            <option >2</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <label for="bookingContact">Booking Contact No:</label>
+          <input type="tel" id="bookingContact" name="bookingContact" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="billingAddress">Billing Address:</label>
+          <input type="text" id="billingAddress" name="billingAddress" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="zipCode">Zip/Postal Code:</label>
+          <input type="text" id="zipCode" name="zipCode" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" required>
+        </div>
+    
+        <div class="form-group2">
+          <label>Role:</label>
+          <select>
+            <option></option>
+            <option>2</option>
+          </select>
+        </div>
+    
+        <div class="form-group2">
+          <label for="clientName">Name of Represented Client:</label>
+          <input type="text" id="clientName" name="clientName" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="leadCounselName">Lead Counsel Name:</label>
+          <input type="text" id="leadCounselName" name="leadCounselName" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="leadCounselEmail">Lead Counsel Email:</label>
+          <input type="email" id="leadCounselEmail" name="leadCounselEmail" required>
+        </div>
+        <div class="form-group2">
+          <span>+</span>
+          <input type="text" id="leadCounselName" name="leadCounselName" placeholder="Add Additional Counsel">
+        </div>
+    
+        <div class="form-group2">
+          <input type="email" id="leadCounselEmail" name="leadCounselEmail">
+        </div>
+      </form>
+    </details>
+  <details>
+    <summary class="dropdown-summary"><h2>Opposing Party Information</h2></summary>
+      <form id="legalForm">
+        <div class="form-group">
+          <label>Firm Name:</label>
+          <select>
+            <option ></option>
+            <option >2</option>
+          </select>
+        </div>
+    
+        <div class="form-group">
+          <label for="bookingContact">Booking Contact No:</label>
+          <input type="tel" id="bookingContact" name="bookingContact" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="billingAddress">Billing Address:</label>
+          <input type="text" id="billingAddress" name="billingAddress" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="zipCode">Zip/Postal Code:</label>
+          <input type="text" id="zipCode" name="zipCode" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" required>
+        </div>
+    
+        <div class="form-group2">
+          <label>Role:</label>
+          <select>
+            <option></option>
+            <option>2</option>
+          </select>
+        </div>
+    
+        <div class="form-group2">
+          <label for="clientName">Name of Represented Client:</label>
+          <input type="text" id="clientName" name="clientName" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="leadCounselName">Lead Counsel Name:</label>
+          <input type="text" id="leadCounselName" name="leadCounselName" required>
+        </div>
+    
+        <div class="form-group2">
+          <label for="leadCounselEmail">Lead Counsel Email:</label>
+          <input type="email" id="leadCounselEmail" name="leadCounselEmail" required>
+        </div>
+        <div class="form-group2">
+          <span>+</span>
+          <input type="text" id="leadCounselName" name="leadCounselName" placeholder="Add Additional Counsel">
+        </div>
+    
+        <div class="form-group2">
+          <input type="email" id="leadCounselEmail" name="leadCounselEmail">
+        </div>
+        
+    </form>
+  </details>
+  <button type="button" id="addFormButton">+ Additional parties</button>
+  <div id="additionalForms" class="added-form"></div>
+  <button type="button" onclick="goToSection(1)">Previous</button>
+  <button type="button" onclick="nextSection(2)">Next</button>
+    </form>
+  </section>
+
+  <section id="section3">
+    <details>
+      <summary class="dropdown-summary"><h2>Basic Logistics</h2></summary>
+  
+      <form id="logisticsForm">
+        
+          <div id="fileNameLabel">Upload Cover page(optional) </div>
+          <input type="file" id="fileInput" onchange="displayFileName()" />
+        
+        <div class="form-group2">
+        <label for="styleOfCause">Style of Cause:</label>
+        <input type="text" id="styleOfCause" name="styleOfCause" required>
+        </div>
+        <div class="form-group2">
+        <label for="countFile">Count File:</label>
+        <input type="text" id="countFile" name="countFile" required>
+      </div>
+        <div class="form-group">
+        <label for="bookingDate">Booking Date:</label>
+        <input type="date" id="bookingDate" name="bookingDate" required>
+      </div>
+        <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <input type="date" id="startDate" name="startDate" required>
+      </div>
+      <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <input type="date" id="endDate" name="endDate" required>
+      </div>
+      <div class="form-group2">
+        <label for="arbitrationWithName">Arbitration with Name:</label>
+        <input type="text" id="arbitrationWithName" name="arbitrationWithName" required>
+      </div>
+      <div class="form-group2">
+        <label for="arbitrationWithEmail">Arbitration with Email:</label>
+        <input type="email" id="arbitrationWithEmail" name="arbitrationWithEmail" required>
+      </div>
+      <div class="form-group2">
+        <span>+</span>
+        <input type="text" id="leadCounselName" name="leadCounselName" placeholder="Add Additional Arbitrator">
+      </div>
+  
+      <div class="form-group2">
+        <input type="email" id="leadCounselEmail" name="leadCounselEmail">
+      </div>
+      <div class="form-group3">
+        <label for="tribunalSecretary" class="switch">
+          Tribunal Secretary:
+          <label class="switch">
+            <input type="checkbox" name="tribunalSecretary" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+      <div class="form-group2">
+        <input type="text" id="leadCounselName" name="leadCounselName" placeholder="Tribunal Secretary's name">
+      </div>
+  
+      <div class="form-group2">
+        <input type="email" id="leadCounselEmail" name="leadCounselEmail">
+      </div>
+        <div class="form-group">
+        <label for="witnessName">Witness Name:</label>
+        <input type="text" id="witnessName" name="witnessName" required>
+        </div>
+        <div class="form-group">
+        <label for="witnessEmail">Witness Email:</label>
+        <input type="email" id="witnessEmail" name="witnessEmail" required>
+        </div>
+        <div class="form-group2">
+          <span>+</span>
+          <input type="text" id="leadCounselName" name="leadCounselName" placeholder="Add Additional witness">
+        </div>
+    
+        <div class="form-group2">
+          <input type="email" id="leadCounselEmail" name="leadCounselEmail">
+        </div>
+      </form>
+    </details>
+  
+    <details>
+      <summary class="dropdown-summary"><h2>Virtual Logistics</h2><br></summary>
+      <form>
+        <label for="requireVCM" class="switch">
+          Do you require VCM (Virtual Case Management)?
+          <label class="switch">
+            <input type="checkbox" name="requireVCM" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+        <div class="form-group3">
+        <label for="vcmInput1">Is there a particular VCM you want to work with?</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <input type="text" id="vcmInput1" name="vcmInput1" required>
+        </div>
+        <div class="form-group">
+        <label for="role">Select a virtual platform</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <select id="role" name="role" required>
+          <option value="Zoom">Zoom</option>
+          <option value="GoogleMeet">Google Meet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="vir">Number of virtual breakout rooms</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <select id="vir" required>
+          <option></option>
+          <option>2</option>
+        </select>
+      </div>
+      <div class="form-group3">
+        <label for="requireDocManaging" class="switch">
+          <img src="./help.png" alt="icon" class="input-icon">
+          Do you need us to provide Document Managing Services?
+          <label class="switch">
+            <input type="checkbox" name="requireDocManaging" checked hidden> 
+            <span class="slider"></span>
+          </label>
+        </label>
+        </div>
+        <div class="form-group2">
+        <label for="additionalInput">
+          <img src="./help.png" alt="icon" class="input-icon">
+          Do you have any special accommodations for your booking that our I.T. team can look into prior to the start date?</label>
+        <input type="text" id="additionalInput" name="additionalInput" required>
+        </div>
+      
+      <div class="form-group2">
+        <label for="requireDocManaging" class="switch">
+          Would you like the your matter to be recorded?
+          <label class="switch">
+            <input type="checkbox" name="requireDocManaging" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+        </div>
+      </form>
+    </details>
+  <button type="button" onclick="goToSection(2)">Previous</button>
+    <button type="button" onclick="nextSection(3)">Next</button>
+  </section>
+  
+
+  <section id="section4">
+  <details>
+    <summary class="dropdown-summary"><h2>Court Reporting</h2></summary>
+    <form id="additionalServicesForm">
+      
+      <div class="form-group3">
+        <label for="requireVCM" class="switch">
+         Will this matter plan to have a Court Reporter?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+      <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          Would you like an Arbitration Place Court Reporter?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+      <div class="form-group3">
+        
+        <label for="additionalInput">Is there a specific Arbitration Place Court Reporter you prefer?</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <select id="role" name="role" required >
+          
+          <option value="" disabled selected >Select AP court Reporter</option>
+          <option>1</option>
+          <option>2</option>
+        </select>
+        <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          Will a transcript be required?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+        <div class="form-group3">
+        <label for="additionalInput">Turnaround time?</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <select id="role" name="role" required>
+          <option value="Standard">Standard</option>
+          <option value="Normal">Normal</option>
+        </select>
+      </div>
+        <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          <img src="./help.png" alt="icon" class="input-icon">
+          Multilingual?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+        <label for="additionalInput">Please list the non-english language you would like accommodated(separate by comma)</label>
+        <input type="text" id="additionalInput" name="additionalInput" required><label for="additionalInput">Daily Rough Draft?</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <select id="role" name="role" required>
+          <option value="dont">I Don't know</option>
+          <option value="do">I know</option>
+        </select>
+       <label for="additionalInput">Realtime reporting?</label>
+       <img src="./help.png" alt="icon" class="input-icon">
+        <select id="role" name="role" required>
+          <option value="dont">I Don't know</option>
+          <option value="do">I know</option>
+        </select>
+        
+  
+      </form>
+    </details>
+    <details>
+      <summary class="dropdown-summary"><h2>Additional Features</h2></summary>
+      
+      <form id="AdditionalForm">
+        <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          Do you require interpretation?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+        <div class="form-group3">
+        <label for="additionalInput">Please list all languages to be interpreted(separate by comma)</label>
+        <img src="./help.png" alt="icon" class="input-icon">
+        <input type="text" id="additionalInput" name="additionalInput" required>
+      </div>
+        <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          <img src="./help.png" alt="icon" class="input-icon">
+          Do you require CART services?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+      <div class="form-group3">
+        <label for="requireVCM" class="switch">
+          Will you need a quote prior to confirmation?
+          <label class="switch">
+            <input type="checkbox" name="userInformation" checked hidden>
+            <span class="slider"></span>
+          </label>
+        </label>
+      </div>
+      <div class="form-group3">
+        <label for="additionalInput">Please list any additional requests or considerations you might have at this time</label>
+        <input type="text" id="additionalInput" name="additionalInput" required>
+      </div>
+    </form>
+    </details>
+    <button type="button" onclick="goToSection(3)">Previous</button>
+    <button type="button" onclick="nextSection(4)">Submit</button>
+  </section>
+<script src="./custom.js"></script>
+</body>
+</html>
